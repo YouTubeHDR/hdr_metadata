@@ -58,7 +58,7 @@ Then the metadata will be written to output.mkv file.
   ./mkvinfo.app/Contents/MacOS/mkvmerge ...
   ```
 To check the metadata of output file, you may run ./mkvinfo out.mkv to get the
-following results (colour metadata is shown in blue colour):
+following results (only colour metadata is shown below):
 ```
 ...
 |  + Video track
