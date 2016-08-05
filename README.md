@@ -1,18 +1,21 @@
 # Matroska Colour Metadata Ingestion Utility
 
-The utilities provided in this repository can be used to ingest colour metadata into matroska containers. This tool is derived from on the open source project [MKVToolNix](https://github.com/mbunkus/mkvtoolnix). 
+The utilities provided in this repository can be used to ingest colour metadata
+into matroska containers. This tool is derived from on the open source project
+[MKVToolNix](https://github.com/mbunkus/mkvtoolnix). 
 For more details about thecolour metadata in Matroska or WebM containers, 
 see [here](http://www.webmproject.org/docs/container/#location-of-the-colour-element-in-an-mkv-file)
 and [here](http://www.webmproject.org/docs/container/#colour).
 
 Two utilities are provided
 * mkvmerge is used to ingest colour metadata into matroska containers.
-* mkvinfo can be used to review the metadata of a matroska file and to confirm the metadata is correctly ingested.
+* mkvinfo can be used to review the metadata of a matroska file and to confirm
+  the metadata is correctly ingested.
 
 Binaries of the two utilities are provided for Windows and MacOS.
 * On Windows
   * Use the 32bits executables from [/windows/32bits](/windows/32bits) for running on i686 CPUs
-  * Use the 64bits executables from [/windows/32bits](/windows/64bits) for running on x86 CPUs.
+  * Use the 64bits executables from [/windows/64bits](/windows/64bits) for running on x86 CPUs.
 * On MacOS
   * Use the mkvmerge.app and mkvinfo.app from [/macos](/macos) 
 
@@ -26,7 +29,8 @@ Binaries of the two utilities are provided for Windows and MacOS.
   ```
 The complete manual about the command line can be found [here](https://mkvtoolnix.download/doc/mkvmerge.html).
 You may also get the list of all flags by runing `mkvmerge -help`. 
-For example, to ingest color metadata into a video named input.mov, you may use the following command.
+For example, to ingest color metadata into a video named input.mov, you may use
+the following command.
 ```shell
  ./src/mkvmerge \
       -o output.mkv\
@@ -53,37 +57,35 @@ Then the metadata will be written to output.mkv file.
   ```
   ./mkvinfo.app/Contents/MacOS/mkvmerge ...
   ```
-To check the metadata of output file, you may run ./mkvinfo out.mkv to get the following results (colour metadata is shown in blue colour):
+To check the metadata of output file, you may run ./mkvinfo out.mkv to get the
+following results (colour metadata is shown in blue colour):
 ```
 ...
 |  + Video track
-|   + Pixel width: 1920
-|   + Pixel height: 1080
-|   + Display width: 1920
-|   + Display height: 1080
-|   + Video colour
-|    + Colour matrix: 1
-|    + Bits per channel: 12
-|    + Horizontal chroma subsample: 1
-|    + Vertical chroma subsample: 1
-|    + Horizontal Cb subsample: 1
-|    + Vertical Cb subsample: 1
-|    + Colour range: 3
-|    + Colour transfer: 13
-|    + Colour primaries: 22
+|   + Pixel width: 3840
+|   + Pixel height: 2160
+|   + Display width: 3840
+|   + Display height: 2160
+|   + Video colour information
+|    + Colour matrix: 9
+|    + Colour range: 1
+|    + Colour transfer: 16
+|    + Colour primaries: 9
 |    + Max content light: 1000
-|    + Max frame light: 1200
+|    + Max frame light: 300
 |    + Video colour mastering metadata
-|     + Red colour coordinate x: 0.01
-|     + Red colour coordinate y: 0.01
-|     + Green colour coordinate x: 0.02
-|     + Green colour coordinate y: 0.02
-|     + Blue colour coordinate x: 0.03
-|     + Blue colour coordinate y: 0.03
-|     + Max luminance: 999.99
+|     + Red colour coordinate x: 0.68
+|     + Red colour coordinate y: 0.32
+|     + Green colour coordinate x: 0.265
+|     + Green colour coordinate y: 0.69
+|     + Blue colour coordinate x: 0.15
+|     + Blue colour coordinate y: 0.06
+|     + White colour coordinate x: 0.3127
+|     + White colour coordinate y: 0.329
+|     + Max luminance: 1000
 |     + Min luminance: 0.01
 ...
 ```
 # Supported input format for HDR videos
-For HDR videos, the only input format we supported is quicktime (`.mov` files) with 
-Apple Prores video stream and AAC audio stream.
+For HDR videos, the only input format we supported is quicktime (`.mov` files)
+with Apple Prores video stream and AAC audio stream.
