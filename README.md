@@ -23,10 +23,11 @@ Binaries of the two utilities are provided for Windows and MacOS.
 * On Windows
   * run mkvmerge.exe from command line console
 * On MacOS
-  * run mkvmerge in the mkvmerge.app folder from terminal as
+  * Please do not click the apps. Open a terminal and run mkvmerge from the mkvmerge.app folder as
   ```
   ./mkvmerge.app/Contents/MacOS/mkvmerge ...
   ```
+
 The complete manual about the command line can be found [here](https://mkvtoolnix.download/doc/mkvmerge.html).
 You may also get the list of all flags by runing `mkvmerge -help`. 
 For example, to ingest color metadata into a video named input.mov, you may use
