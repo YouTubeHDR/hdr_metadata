@@ -90,3 +90,7 @@ following results (only colour metadata is shown below):
 # Supported input format for HDR videos
 For HDR videos, the only input format we supported is quicktime (`.mov` files)
 with Apple Prores video stream and AAC audio stream.
+
+# Drag and Drop App for MAC OS
+You may download the pywrapmkvmerge.app in [/macos](/macos) and drag a `.mov` file to the app. Two metadata ingested video will be automatically generated. One video is named as `*_PQ.mkv`, which is created with the command line above. The other video is named as `*_HLG.mkv`, which is created using the same command but with `--colour-transfer-characteristics = 0:18`.
+
