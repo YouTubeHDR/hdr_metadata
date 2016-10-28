@@ -50,7 +50,7 @@ the following command.
 Then the metadata will be written to output.mkv file. 
 
 If you want to specify a 3D Look-Up Table (LUT) as the hint to YouTube's SDR
-downconversion, add the following flags to the command line will do the job.
+downconversion, adding the following flags to the command line will do the job.
 ```
 --attachment-mime-type application/x-cube \
 --attach-file path-to-your-look-up-table
