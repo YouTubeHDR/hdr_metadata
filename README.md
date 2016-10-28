@@ -94,3 +94,7 @@ with Apple Prores video stream and AAC audio stream.
 # Drag and Drop App for MAC OS
 You may download the pywrapmkvmerge.app in [/macos](/macos) and drag a `.mov` file to the app. Two metadata ingested video will be automatically generated. One video is named as `*_PQ.mkv`, which is created with the command line above. The other video is named as `*_HLG.mkv`, which is created using the same command but with `--colour-transfer-characteristics = 0:18`.
 
+If you want to specify a 3D Look-Up Table (LUT) as the hint to YouTube's SDR
+downconversion, select both the LUT and the HDR video, and drag and drop them on
+the app. The tool will automatically attach the LUT to the generated `*.mkv
+files.
