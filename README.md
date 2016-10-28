@@ -105,4 +105,4 @@ You may download the pywrapmkvmerge.app in [/macos](/macos) and drag a `.mov` fi
 If you want to specify a 3D Look-Up Table (LUT) as the hint to YouTube's SDR
 downconversion, select both the LUT and the HDR video, and drag and drop them on
 the app. The tool will automatically attach the LUT to the generated `*.mkv`
-files. The user must name the LUT file with a `.cube` extension.
+files. Note that the user MUST name the LUT file with a `.cube` extension to inform the app the file is a look up table.
