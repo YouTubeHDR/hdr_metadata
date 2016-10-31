@@ -49,6 +49,7 @@ the following command.
 ```
 Then the metadata will be written to output.mkv file. 
 
+# (Optional) Attaching 3D Look-Up Table
 If you want to specify a 3D Look-Up Table (LUT) as the hint to YouTube's SDR
 downconversion, adding the following flags to the command line will do the job.
 ```
@@ -96,8 +97,7 @@ following results (only colour metadata is shown below):
 ...
 ```
 # Supported input format for HDR videos
-For HDR videos, the only input format we supported is quicktime (`.mov` files)
-with Apple Prores video stream and AAC audio stream.
+For HDR videos, YouTube supports Apple Prores, DNxHR and H264 in quicktime (.mov files) or .mp4 files with AAC audio stream. For more information please see [here] (https://docs.google.com/document/d/1Di6hBotHO_Xb02o50Rp8BxGJ__XjJz88dwFWY9TVDG8/edit).
 
 # Drag and Drop App for MAC OS
 You may download the pywrapmkvmerge.app in [/macos](/macos) and drag a `.mov` file to the app. Two metadata ingested video will be automatically generated. One video is named as `*_PQ.mkv`, which is created with the command line above. The other video is named as `*_HLG.mkv`, which is created using the same command but with `--colour-transfer-characteristics = 0:18`.
@@ -105,6 +105,6 @@ You may download the pywrapmkvmerge.app in [/macos](/macos) and drag a `.mov` fi
 If you want to specify a 3D Look-Up Table (LUT) as the hint to YouTube's SDR
 downconversion, select both the LUT and the HDR video, and drag and drop them on
 the app. The tool will automatically attach the LUT to the generated `*.mkv`
-files. Under the hood, the tool is adding the LUT as an MKV attachment with the mime-type 'application/x-cube'. 
+files. Under the hood, the tool is adding the LUT as an MKV attachment with the mime-type `application/x-cube`. 
 
 Note that the user MUST name the LUT file with a `.cube` extension to inform the app the file is a look up table.
